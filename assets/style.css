@@ -219,8 +219,10 @@ figure a:hover {
         position: relative;
         margin: auto;
     }
-    figure:nth-child(odd) {
-        margin-right: auto;
+    figure, figure:nth-child(odd) {
+        margin: 20px auto;
+        display: block;
+        position: relative;
     }
 }
 
@@ -251,6 +253,7 @@ figure a:hover {
         width: 100%;
     }
     figure, figure:nth-child(odd) {
+        display: inline-block;
         margin: 1%;
     }
 }
