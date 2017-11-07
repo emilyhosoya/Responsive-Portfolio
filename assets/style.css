@@ -94,7 +94,7 @@ article {
     width: 50%;
     vertical-align: top;
     /* float: left; */
-    /* margin-right: 40px; */
+    margin-right: 2%;
 }
 
 aside {
@@ -107,7 +107,8 @@ aside h2 {
 }
 
 aside img {
-    height: 87px;
+    width: 32%;
+    max-width: 150px;
 }
 
 aside img:hover {
@@ -165,13 +166,17 @@ input:focus, textarea:focus {
 }
 
 figure {
-    position: relative;
     display: inline-block;
-    margin-bottom: 20px;
+    width: 47%;
+    position: relative;
 }
 
-figure:nth-child(odd) {
-    margin-right: 46px;
+figure img, figure .title {
+    width: 100%;
+}
+
+figure, figure:nth-child(odd) {
+    margin: 1%;
 }
 
 figure a:hover {
@@ -188,15 +193,13 @@ figure a:hover {
     text-align: center;
 }
 
-@media(max-width: 980px) {
+@media only screen and (max-width: 980px) {
     article {
         width: 40%;
+        margin-right: 5%;
     }
     aside {
         width: 30%;
-    }
-    aside img {
-        max-width: 68px;
     }
     aside {
         text-align: center;
@@ -209,16 +212,19 @@ figure a:hover {
         display: block;
         margin: auto auto 15px;
     }
-    figure, title {
+    figure, figure .title {
+        width: 100%;
         display: block;
         max-width: 300px;
+        position: relative;
+        margin: auto;
     }
     figure:nth-child(odd) {
-        margin-right: 0;
+        margin-right: auto;
     }
 }
 
-@media(max-width: 768px) {
+@media only screen and (max-width: 768px) {
     main {
         margin: auto;
     }
@@ -229,17 +235,27 @@ figure a:hover {
     }
     .profile-pic {
         width: 100%;
-        max-width: 400px;
+        max-width: 200px;
         display: block;
         margin: auto auto 15px;
-        float: none !important;
+        float: left;
+    }
+    form input, form textarea {
+        max-width: none;
+    }
+    figure {
+        display: inline-block;
+        width: 47%;
+    }
+    figure img, figure .title {
+        width: 100%;
     }
     figure, figure:nth-child(odd) {
-        margin: 20px auto;
+        margin: 1%;
     }
 }
 
-@media(max-width: 640px) {
+@media only screen and (max-width: 640px) {
     header {
         position: static;
         padding: 0;
@@ -273,5 +289,8 @@ figure a:hover {
     }
     figure, figure:nth-child(odd) {
         margin: 20px auto;
+        display: block;
+        position: relative;
+        width: 100%;
     }
 }
